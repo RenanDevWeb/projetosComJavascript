@@ -3,6 +3,10 @@ body{
     padding-top: 2rem;
 }
 .quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Helvetica;
     font-size: 1.6rem;
     text-align: center;
@@ -20,6 +24,12 @@ body{
     font-weight: bold;
     color: #133110; 
 }
+.quote img{
+    max-width: 300px;
+    max-height: 150px;
+    margin: .9rem;
+    border-radius: 5px;
+}
 .button{
     font-size: 1.4rem;
     background-color: #0a2c07;
@@ -30,6 +40,7 @@ body{
     border: none;
     transform: .4s;
 }
+
 button:hover{
     background-color: #12520c;
 }

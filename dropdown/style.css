@@ -67,3 +67,10 @@ nav ul ul ul{
 #back-to-top:hover{
     background-color: #555;
 }
+
+header img{
+    
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+}

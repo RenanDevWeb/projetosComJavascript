@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ccc;
+}
+  h1{
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 2.5rem;
+  }
+  .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+  }
+
+  .boxProjects{
+    max-width: 1000px;
+    display: flex;
+    padding:  1.8rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: -20px -8px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -20px -8px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -20px -8px 5px 0px rgba(0,0,0,0.75);
+  }
+
+
+.boxProjects ul{
+    list-style: none;
+}
+
+.boxProjects ul li{
+    margin: 1rem 0;
+}
+
+.boxProjects ul li a{
+    padding: 0.5rem;
+    color: black;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: 0.8s;
+}
+.boxProjects ul li a:hover{
+
+    font-size: 1.5rem;
+}

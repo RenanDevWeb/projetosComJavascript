@@ -2,7 +2,7 @@ const generateButton = document.querySelector("#generate-button")
 const colorsDiv = document.querySelector(".colors")
 const quantidadeDeCor = document.querySelector("#quantidadeDeCor")
 
-swal("Hello world!");
+
 
 function generateColors(){
     colorsDiv.innerHTML = ''

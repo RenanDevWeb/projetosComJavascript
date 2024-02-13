@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock </title>
+  <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+      }
+
+    body{
+      background:#0f2027;
+      }
+
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 140px;
+    }
+ main .clock{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border:  2px solid greenyellow;
+      border-radius: 50%;
+      width: 260px;
+      height: 180px;
+  }
+
+  main .clock .clock-hours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .clock .clock-hours .hours{
+    margin-top: 0;
+    font-size: 36px;
+    padding: 6px;
+    color: royalblue;
+    margin-top: 28px;
+  }
+  main .clock .clock-hours .minutes{
+    font-size: 36px;
+    color: royalblue;
+    padding: 6px;
+    margin-top: 28px;
+  }
+  main .clock .clock-hours .seconds{
+    font-size: 36px;
+    color: royalblue;
+    padding: 6px;
+    margin-top: 28px;
+  }
+
+  span{
+    font-size: 18px;
+    color: royalblue;
+    padding: 6px;
+    margin-top: 24px;
+  }
+  main .clock .clock-days{
+      display: flex;
+  }
+  main .clock .clock-days .day{
+    font-size: 18px;
+    color: royalblue;
+    padding: 6px;
+  }
+  main .clock .clock-days .month{
+    font-size: 18px;
+    color: royalblue;
+    padding: 6px;
+  }
+  main .clock .clock-days .year{
+    font-size: 18px;
+    color: royalblue;
+    padding: 6px;
+  }
+
+  </style>
+  
+
+</head>
+<body>
+<main>
+    <div class="clock">
+      <div class="clock-hours">
+          <div class="hours">00</div><span>:</span>
+          <div class="minutes">00 </div><span>:</span>
+          <div class="seconds">00</div>
+        </div>
+        <div class="clock-days">
+            <div class="day"></div>
+            <div class="month"></div>
+            <div class="year"></div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+ 
+  
+  const hours = document.querySelector('.hours')
+  const minutes = document.querySelector('.minutes')
+  const seconds = document.querySelector('.seconds')
+  const days = document.querySelector('.day')
+  const months = document.querySelector('.month')
+  const years = document.querySelector('.year')
+  
+
+
+function setDate(){
+  const date = new Date()
+
+  const hour = date.getHours();
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  const day =  date.getDate()
+  const month = date.getMonth() + 1
+  const year = date.getFullYear()
+
+  
+
+  if(hour > 9){
+    hours.innerHTML = hour
+  }else{
+    hours.innerHTML = `0${hour}` 
+  }
+
+  if(minute > 9){
+    minutes.innerHTML = minute
+  }else{
+    minutes.innerHTML = `0${minute}` 
+  }
+  if(second > 9){
+    seconds.innerHTML = second
+  }else{
+    seconds.innerHTML = `0${second}` 
+  }
+
+
+  if(day > 9){
+    days.innerHTML = day
+  }else{
+    days.innerHTML = `0${day}`
+  }
+
+
+
+  switch (month) {
+    case 1:
+      months.innerHTML = "Janeiro"
+    case 2:
+     months.innerHTML = "Fevereiro"
+    case 7:
+       months.innerHTML = "Julho"
+    case 8:
+       months.innerHTML = "Agosto"
+    default:
+      break;
+  }
+
+
+ 
+  years.innerHTML = year
+
+}
+
+
+
+// setInterval(setDate,1000)
+
+</script>
+</body>
+</html>

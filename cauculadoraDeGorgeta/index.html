@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+    <title>Cauculador de gorjetas </title>
+</head>
+<body>
+    <div class="cauculator">
+        <h2>Cauculadora de Gorjetas</h2>
+
+        <label for="billAmount">Valor da conta</label>
+        <input type="text" name="billAmount" id="billAmount" placeholder="R$" />
+    
+        
+        <label for="serviceQuality">Valor da conta</label>
+        <select name="serviceQuality" id="serviceQuality">
+           <option value="0.1">Excelente</option>
+           <option value="0.08">Otimo</option>
+           <option value="0.05">Bom</option>
+           <option value="0.02">Ruim</option>
+        </select>
+
+        <button id="caulateButton">Caucular Gorjeta</button>
+        
+        <div class="result">
+           <label for="tipAmount">Valor da gorjeta</label>
+           <input type="text" name="tipAmount" id="tipAmount" disabled />
+           <label for="totalAmount">Valor da gorjeta</label>
+           <input type="text" name="totalAmount" id="totalAmount" disabled />
+
+        </div>
+    </div>
+</body>
+</html>
